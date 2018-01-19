@@ -1,4 +1,7 @@
-# Social-Network-Analysis
+## Social-Network-Analysis
+
+####This is an ongoing project, will be completed by first week of February.
+
 Shiny app created to study social network of emails shared withing European union
 
 Description of Dataset:
