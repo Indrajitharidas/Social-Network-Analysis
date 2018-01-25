@@ -18,12 +18,16 @@ list_user <- filter(linksdf, Source == user)
 list_user <- data.frame(rbind(user, unique(list_user['Target'])))
 colnames(list_user) <-  'list_user'
 c(head(list_user), count(list_user))
-list_user <- list_user[1:10,] # 10 2-hop connections
+list_user <- list_user[1:5,] # 10 2-hop connections
 
 # Make a data frame for 2 hop connection, basically remove 1-hops from linksdf[linksdf$Source %in% list_user,]
 
 df <- linksdf[linksdf$Source %in% list_user,]
-df <- df[df$Target %in% list_user, ]
+df <- filter(df, Source != user) # mails from all users except the selected user
+temp <- linksdf[linksdf$Source == user,] # mails from selected user
+temp <- temp[temp$Target %in% list_user,]
+
+df <- rbind(temp, df)
 
 #simpleNetwork(linksdf[linksdf$Source %in% list_user$list_user,], zoom = TRUE)
 
