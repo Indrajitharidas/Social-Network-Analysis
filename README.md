@@ -1,7 +1,5 @@
 ## Social-Network-Analysis
 
-####This is an ongoing project, will be completed by first week of February.
-
 Shiny app created to study social network of emails shared withing European union
 
 Description of Dataset:
@@ -12,3 +10,20 @@ The network was generated using email data from a large European research instit
 The dataset also contains "ground-truth" community memberships of the nodes. Each individual belongs to exactly one of 42 departments at the research institute. 
 
 This network represents the "core" of the email-EuAll network, which also contains links between members of the institution and people outside of the institution (although the node IDs are not the same).
+
+### File formats:
+__Links file__: This should contain two columns. First column representing the origination of the link and second column being the target of the link.
+__Nodes File__: Two columns, first one should represnt the node and second one should represent the group of the node 
+
+### How to use:
+1) Download SNA.R and rusn to launch shiny app
+2) Upload relevant files
+    - Links file(email-Eu-core): This should contain the list of links
+    - Nodes File(email-Eu-core-department-labels): this should have unique list of nodes and their group
+
+### Use cases
+This app can be used for various kinds of network analysis if files are uploaded in proper format:
+1) Social Network: Who interatcs whine whom
+2) Sports Network: For example, links can be the passes made between players(nodes) in a basketball match
+3) People Analytics
+4) Customer Network
