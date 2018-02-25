@@ -13,6 +13,7 @@ This network represents the "core" of the email-EuAll network, which also contai
 
 ### File formats:
 __Links file__: This should contain two columns. First column representing the origination of the link and second column being the target of the link.
+
 __Nodes File__: Two columns, first one should represnt the node and second one should represent the group of the node 
 
 ### How to use:
